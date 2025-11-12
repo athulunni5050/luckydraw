@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0a0025;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Flashing between red and white for prize label */
+@keyframes prizeFlash {
+  0% {
+    color: #ef4444; /* red-500 */
+    text-shadow: 0 0 12px rgba(239, 68, 68, 0.9);
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    color: #ef4444; /* red-500 */
+    text-shadow: 0 0 12px rgba(239, 68, 68, 0.9);
+  }
+}
+
+/* Neon cyan digits to match design */
+.neon-digit {
+  color: #66e6ff;
+  text-shadow: 0 0 12px #67e8f9, 0 0 28px #22d3ee;
+}
+
+/* Metallic cyan digits with glossy finish - reduced brightness, less green */
+.neon-digit-metallic {
+  color: #38bdf8;
+  text-shadow: 
+    0 0 8px #22d3ee,
+    0 0 16px #06b6d4,
+    0 0 24px #0891b2,
+    0 2px 4px rgba(56, 189, 248, 0.4),
+    0 -2px 2px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6)) brightness(1.0);
+}
